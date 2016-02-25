@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Welcome</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/main.css" />
+    <!-- <meta http-equiv="refresh" content="5" url="index.html" /> -->
+  </head>
+  <body style ='background-image: url("../static/images/welcome.jpeg.")'>
+    <div>
+      <div id="header">
+        <h2>G<small>etitdon</small>E<h2>
+      </div>
+
+      <div id="mainbody">
+        <div id="loginside">
+          <p>Sign in Here</p>
+        <form action ="/welcome" method="post">
+          <input type="text" placeholder = "username.." name ="username" value="{{request.form.username}}" />
+          <input type="password" placeholder = "password.." name ="password" value="{{request.form.password}}" />
+          <input class = "btn btn-default" type="submit" value="Signin" />
+        </form>
+
+        {% if error %}
+          <p class="error"><strong>Error:</strong> {{error}}</p>
+        {% endif %}
+        </div>
+      </div>
+      <div id="footer">
+        <p>copyright emeka@gmail.com</p>
+      </div>
+    </div>
+  </body>
+</html>

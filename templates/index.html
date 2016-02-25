@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Login | My Homepage</title>
+		<link type="text/css" rel="stylesheet" href="../static/css/main.css" />
+		<!-- <meta http-equiv="refresh" content="5" url="index.html" /> -->
+	</head>
+	<body style='background-image: url("../static/images/index.jpg.")'>
+		<div>
+			<div id="header">
+				<h2>getitdone<h2>
+			</div>
+				
+				<form action ="" method="post">
+				<div id="signup">
+						<h4>Fill the form below to sign up.</h4>
+						<p>Enter Your First Name</p>
+						<input type="text" placeholder = "First name.." name ="Firstname" value="{{request.form.Firstname}}" /><br />
+						<p>Enter Your Last Name</p>
+						<input type="text" placeholder = "Last name.." name ="Lastname" value="{{request.form.Lastname}}"/><br />
+						<p>Enter Your Email Address</p>
+						<input type="text" placeholder = "Email.." name ="email" value="{{request.form.email}}" /><br />
+						<p>Choose a Password</p>
+						<input type="password" placeholder = "Enter password.." name ="enterpassword" value="{{request.form.enterpassword}}" /><br />
+						<p>Re-type the password</p>
+						<input type="password" placeholder = "Re-type password.." name ="Repassword" value="{{request.form.Repassword}}" /><br />
+						<input class = "btn btn-default" type="submit" value="Signup" id="but"/><br />
+						<p>Already on Getitdone?<a href ="welcome">Sign in</a></p>
+					</form>
+
+				{% if error %}
+					<p class="error"><strong>Error:</strong> {{error}}</p>
+				{% endif %}
+				</div>
+			</div>
+			
+			<div id="footer">
+				<p>copyright emeka@gmail.com</p>
+			</div>
+		</div>
+	</body>
+</html>
