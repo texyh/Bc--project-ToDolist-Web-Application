@@ -11,19 +11,17 @@
 				<h2>getitdone<h2>
 			</div>
 				
-				<form action ="" method="post">
+				<form action ="/" method="post">
 				<div id="signup">
 						<h4>Fill the form below to sign up.</h4>
 						<p>Enter Your First Name</p>
-						<input type="text" placeholder = "First name.." name ="Firstname" value="{{request.form.Firstname}}" /><br />
+						<input type="text" placeholder = "First name.." name ="firstname" value="{{request.form.firstname}}" /><br />
 						<p>Enter Your Last Name</p>
-						<input type="text" placeholder = "Last name.." name ="Lastname" value="{{request.form.Lastname}}"/><br />
+						<input type="text" placeholder = "Last name.." name ="lastname" value="{{request.form.lastname}}"/><br />
 						<p>Enter Your Email Address</p>
 						<input type="text" placeholder = "Email.." name ="email" value="{{request.form.email}}" /><br />
-						<p>Choose a Password</p>
+						<p>Password</p>
 						<input type="password" placeholder = "Enter password.." name ="enterpassword" value="{{request.form.enterpassword}}" /><br />
-						<p>Re-type the password</p>
-						<input type="password" placeholder = "Re-type password.." name ="Repassword" value="{{request.form.Repassword}}" /><br />
 						<input class = "btn btn-default" type="submit" value="Signup" id="but"/><br />
 						<p>Already on Getitdone?<a href ="welcome">Sign in</a></p>
 					</form>
@@ -33,7 +31,6 @@
 				{% endif %}
 				</div>
 			</div>
-			
 			<div id="footer">
 				<p>copyright emeka@gmail.com</p>
 			</div>
